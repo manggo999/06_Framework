@@ -25,7 +25,7 @@ public class TestController {
 	
 	// 1) 메서드에 작성 : 
 	// - 요청 주소와 해당 메서드를 매핑
-	// - GET/POST 가리지 않고 매핑 (속성을 통해서 지정 or 다른 어노테이션을 이용해서 가능)
+	// - GET/POST 가리지 않고 매핑 (속성을 통해서 지정 가능 or 다른 어노테이션을 이용해서 가능)
 	
 	/*
 	@RequestMapping(value="/hello", method=RequestMethod.POST)
@@ -38,7 +38,7 @@ public class TestController {
 	
 	// 2) 클래스에 작성
 	// - 공통 주소를 매핑
-	// ex) /todo/insert, todo/select, /todo/update .. 
+	// ex) /todo/insert, /todo/select, /todo/update .. 
 	
 	/*
 	@RequestMapping("/todo")
@@ -75,11 +75,11 @@ public class TestController {
 		 *   
 		 *   
 		 * */
-		
+		 
 		
 		
 		// src/main/resources/templates/test.html
-		return"test"; // 접두사 + 반환값 + 접미사 경로의 html로 forward
+		return"test"; // 접두사 + 반환값 + 접미사 경로의 html로 forward가 된다
 		
 		/*접두사, 접미사, forward 설정은 View Resolver 객체가 담당*/		
 	}
