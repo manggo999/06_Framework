@@ -37,6 +37,10 @@ public interface TodoMapper {
 	
 	
 
+	
+
+
+
 	/** (TEST) todoNo가 1인 할 일 제목 조회
 	 * @return
 	 * */
@@ -86,4 +90,20 @@ public interface TodoMapper {
 	 */
 	int deleteComplete(Todo todo);
 
+	
+	
+	/** 전체 할 일 개수 조회
+	 * @return
+	 */
+	int getTotalCount();
+	
+	
+	
+	/** 할 일 삭제(Ajax)
+	 * @param todoNo
+	 * @return result
+	 */
+	int todoDelete(int todoNo);
+
+	
 }

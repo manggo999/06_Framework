@@ -1,8 +1,0 @@
-package edu.kh.demo.controller;
-
-import org.springframework.stereotype.Controller;
-
-@Controller // 요청과 응답을 제어하는 역할 명시 + Bean(==Spring이 만들고 관리하는 객체)등록
-public class ExampleController {
-
-}

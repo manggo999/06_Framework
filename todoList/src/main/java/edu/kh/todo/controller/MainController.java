@@ -16,7 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 @Controller  // 요청/응답 제어 역할 명시 + Bean
 public class MainController {
 	
-	@Autowired // 등록된 Bean 중 같은 타입이서나 상속관계 DI(의존성)
+	@Autowired // 등록된 Bean 중 같은 타입이거나 상속관계 DI(의존성)
 	private TodoService service;
 	
 	@RequestMapping("/")
@@ -25,7 +25,7 @@ public class MainController {
 		log.debug("service : " + service);
 		// service : edu.kh.todo.model.service.TodoServiceImpl@72c5dd72
 		
-		// todo 가 1인 todo의 제먹 조회하여 request scope에 추가
+		// todo 가 1인 todo의 제목 조회하여 request scope에 추가
 		String testTitle = service.testTitle();
 		model.addAttribute("testTitle", testTitle);
 		

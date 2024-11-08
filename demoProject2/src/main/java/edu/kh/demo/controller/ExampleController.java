@@ -123,7 +123,7 @@ public class ExampleController {
 		return "example/testResult";
 	}
 	
-	// a태그 클릭 후  왔기 때문에 GET
+	// a태그 클릭 후 왔기 때문에 GET
 	@GetMapping("ex4")
 	public String ex4(Model model) {
 		

@@ -36,10 +36,10 @@ public class ExampleController {
 		
 		// forward 하려는 html 파일 경로 return 작성
 		// 단, ViewResolver가 제공하는
-		// Thymleaf 접두사, 접미사는 제외하고 작성
+		// Thymeleaf 접두사, 접미사는 제외하고 작성
 		
 		// 접두사: classpath:/templates/
-		// 접미사 : 
+		// 접미사 : .html
 		
 		return"example";
 		
