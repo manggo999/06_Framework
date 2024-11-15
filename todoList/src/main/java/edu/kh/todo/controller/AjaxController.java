@@ -105,7 +105,7 @@ public class AjaxController {
 	// 할 일 추가
 	@ResponseBody // 비동기 요청 결과로 값을 반환
 	@PostMapping("add")
-	public int addTodo(// @RequestParam 은 일반적으로 쿼리 파라미터나 URL 파라미터에 사용) {
+	public int addTodo(// @RequestParam 은 일반적으로 쿼리 파라미터나 URL 파라미터에 사용)
 						
 			//@RequestBody는 기본적으로 JSON 형식을 기대함.
 			@RequestBody Todo todo // 요청 body에 담긴 값을 Todo DTO에 저장
@@ -133,6 +133,8 @@ public class AjaxController {
 		
 		// List(Java 전용 타입)으로 반환
 	}
+	
+	
 	
 	// 할 일 상세 조회
 	@ResponseBody // 요청한 곳으로 데이터 돌려보냄

@@ -1,6 +1,7 @@
 package edu.kh.project.member.controller;
 
 import java.lang.foreign.MemorySegment.Scope;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -55,10 +56,6 @@ public class MemberController {
 	 *   
 	 *   
 	 * */
-	
-	
-	
-	
 	
 	
 	/** 로그인
@@ -226,6 +223,15 @@ public class MemberController {
 	}
 	
 	
+	// 회원 목록 조회
+	@ResponseBody
+	@GetMapping("selectMemberList")
+	public List<Member> selectMemberList () {
+		List<Member> memberSelect = service.selectMemberList();
+		
+		return memberSelect;
+		
+	}  
 	
 	
 	

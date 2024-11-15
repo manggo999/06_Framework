@@ -96,3 +96,46 @@ if(loginForm != null) {
 
 }
 
+// 회원 목록 조회(비동기)
+
+const selectBtn = document.querySelector("#selectMemberList");
+const memberList = document.querySelector("#memberList");
+
+selectBtn.addEventListener("click", () => {
+
+  // console.log("asdfsfd");
+
+  fetch("/member/selectMemberList")  // 서버로 비동기 요청 (GET 요청)
+  // 첫 번째 then (응답을 처리하는 역할)
+  .then(response => { 
+    return response.json();
+  })
+  .then( memList => {
+
+    // console.log(result);
+
+    memberList.innerText = "";
+
+    const td = document.createElement("td");
+
+    for( let mem of memList ) {
+      const tr = document.createElement("tr");
+
+      const arr = ['memberNo', 'memberEmail', 'memberNickname', 'memberDelFl'];
+
+      for( let i of arr) {
+        
+        const td = document.createElement("td");
+        td.innerText = mem[i];
+        tr.append(td);
+      }
+
+      memberList.append(tr);
+
+    }
+
+
+
+  })
+
+}); 
